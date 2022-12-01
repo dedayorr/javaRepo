@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Basic</title>
+    <script src="/java.js"></script>
+    <link rel="stylesheet" href="/java.css">
+</head>
+<body>
+        <section>
+            <p><lottie-player src="https://assets6.lottiefiles.com/packages/lf20_V53nC8.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player></p>
+            <div class="container">
+                <div class="text">
+                    <h1>GUESS THE NUMBER</h1>
+                    <p>Random numbers from 1-10 have been selected.
+                        See if you can guess it and win a sum of $10,000 and a brand new iphone13 pro max.
+                    </p>
+                       <label for="guessfield">Enter your guess here: </label>
+                       <input type="text" id="guessfield" class="guessfield"><br><br>
+                       <input class="button" type="submit" value="Submit guess" class="guessSubmit" id="submitguess">
+                </div>
+            </div>            
+        </section>
+
+    
+    <script>
+        const value = Math.floor((Math.random()*10+1));
+
+        // let guesses = 1
+        
+        document.getElementById("submitguess").onclick = function(){
+
+        const guess = document.getElementById("guessfield").value;
+
+        if (guess == value){
+            alert("congratulations you guessed right!");
+        }
+        else if (guess > value){
+            alert("oops! try a lesser number")
+        }
+        else {
+            alert("opps! try a greater number")
+        }
+        }
+
+    </script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>
