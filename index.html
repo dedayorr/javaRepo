@@ -26,11 +26,9 @@
 
     
     <script>
-        const value = Math.floor((Math.random()*10+1));
-
-        // let guesses = 1
-        
+       
         document.getElementById("submitguess").onclick = function(){
+        const value = Math.floor((Math.random()*10+1));
 
         const guess = document.getElementById("guessfield").value;
 
@@ -40,12 +38,13 @@
         else if (guess > value){
             alert("oops! try a lesser number")
         }
-        else {
+        else{
             alert("opps! try a greater number")
         }
+ 
         }
-
     </script>
+
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>
